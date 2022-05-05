@@ -15,7 +15,8 @@ let button = document.querySelector("button");
 
 const convertToHumanYears = () => {
     let converted = document.getElementById("convertedAge");
-    let inputAge = document.getElementById("ageOfDog").value;
+    let inputField = document.getElementById("ageOfDog");
+    let inputAge = inputField.value;
     if (!inputAge) {
         let message = "You forgot to enter the age.";
         converted.innerHTML = message;
@@ -30,6 +31,7 @@ const convertToHumanYears = () => {
             //alert(convertedAge);
         }
     }
+    inputField.value = '';
 };
 
 button.onclick = convertToHumanYears;

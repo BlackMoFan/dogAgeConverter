@@ -56,7 +56,7 @@ header {
 
 header #logo {
     display: flex;
-    font-size: 40px;
+    font-size: 20px;
     color: var(--color-dark);
 }
 
@@ -77,6 +77,7 @@ main {
     top: 100px;
     height: 100%;
     width: 100%;
+    font-size: 20px;
 }
 
 section {
@@ -94,8 +95,8 @@ section #convertedAge {
 
 section #inputArea {
     max-width: 30vw;
-    height: 130px;
-    margin: 100px auto;
+    height: 40px;
+    margin: 200px auto;
     padding: 0 10px;
     text-align: center;
     border-radius: var(--border-radius-2);
@@ -104,6 +105,8 @@ section #inputArea {
 
 h2 {
     color: var(--color-dark);
+    font-size: 19px;
+    text-decoration: solid underline var(--color-dark) 4px;
 }
 
 label {
@@ -113,7 +116,7 @@ label {
 
 label span {
     color: var(--color-dark);
-    font-size: 8px;
+    font-size: 15px;
 }
 
 input[type=number] {
@@ -121,7 +124,7 @@ input[type=number] {
     width: 250px;
     border:none;
     border-bottom:1px var(--color-warning) solid;
-    font-size: 10px;
+    font-size: 20px;
     outline:none;
     padding:.5em;
     width:100%;
@@ -157,7 +160,7 @@ button {
     color: var(--color-white);
     font-family: 'Space Mono', monospace, serif, sans-serif;
     font-weight: 600;
-    font-size: 9px;
+    font-size: 18px;
     letter-spacing: 1.3px;
     padding: 12px 40px;
     text-decoration: none;
@@ -166,22 +169,22 @@ button {
 }
 
 .instructions-row {
-  margin: 0 auto;
-  width: 400px;
+    margin: 0 auto;
+    width: 400px;
 }
 
 .instructions-number {
-  padding-right: 25px;
-  font-family: sans-serif;
-  font-size: 36px;
-  color: var(--color-primary);
+    padding-right: 25px;
+    font-family: sans-serif;
+    font-size: 36px;
+    color: var(--color-primary);
 }
 
 .instructions-text {
-  padding: 10px;
-  font-family: 'Work Sans';
-  font-size: 14px;
-  color: var(--color-dark);
+    padding: 10px;
+    font-family: 'Work Sans';
+    font-size: 14px;
+    color: var(--color-dark);
 }
 
 #relatedLinks {
@@ -190,9 +193,12 @@ button {
 
 section #linksArea {
     margin: 20px auto;
+    display: flex;
+    flex-direction: row;
 }
 
 section #linksArea a {
+    font-size: 15px;
     padding: 20px 30px;
     color: var(--color-primary);
 }
@@ -261,32 +267,67 @@ footer a {
     color: var(--color-info-dark);
 }
 
-/* 48em = 768px */
-
-@media (min-width: 48em) {
+@media only screen and (max-width: 600px) {
     /*
      * LOGO
      * SECTION
      * INPUT AREA
      */
     header #logo {
-        font-size: 20px;
+        font-size: 30px;
+    }
+
+    main {
+        font-size: 14px;
+    }
+
+    main h2 {
+        font-size: 25px;
     }
     
     label span {
-        font-size: 15px;
+        font-size: 8px;
     }
 
     input[type=number] {
-        font-size: 20px;
+        font-size: 10px;
+    }
+
+    #inputArea {
+        height: 100px;
+    }
+
+    input[type=number]:focus ~span {
+        font-size:.6em;
+        top:-5em;
+        z-index:-1;    
     }
 
     button {
-        font-size: 18px;
+        font-size: 5px;
+        padding: 10px 10px;
+    }
+
+    .instructions-row {
+        width: 350px;
+    }
+
+    .instructions-number {
+        font-size: 48px;
+    }
+
+    .instructions-text {
+        padding: 20px 30px;
+        font-size: 10px;
     }
 
     section #linksArea {
         display: flex;
+        flex-direction: column;
+    }
+
+    section #linksArea a {
+        font-size: 24px;
     }
 
 }
