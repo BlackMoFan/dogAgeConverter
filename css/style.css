@@ -62,7 +62,7 @@ header {
 
 header #logo {
     display: flex;
-    font-size: 50px;
+    font-size: 40px;
     color: var(--color-dark);
 }
 
@@ -119,6 +119,7 @@ label {
 
 label span {
     color: var(--color-dark);
+    font-size: 10px;
 }
 
 input[type=number] {
@@ -126,7 +127,7 @@ input[type=number] {
     width: 250px;
     border:none;
     border-bottom:1px var(--color-warning) solid;
-    font-size:1em;
+    font-size: 10px;
     outline:none;
     padding:.5em;
     width:100%;
@@ -162,7 +163,7 @@ button {
     color: var(--color-white);
     font-family: 'Space Mono', monospace, serif, sans-serif;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 9px;
     letter-spacing: 1.3px;
     padding: 12px 40px;
     text-decoration: none;
@@ -195,7 +196,6 @@ button {
 
 section #linksArea {
     margin: 20px auto;
-    display: flex;
 }
 
 section #linksArea a {
@@ -256,12 +256,16 @@ section #linksArea a {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: -100px;
     left: 20px;
     width: 100%;
     font-size: 9px;
     color: var(--color-dark);
+}
+
+footer a {
+    color: var(--color-info-dark);
 }
 
 /* 48em = 768px */
@@ -275,4 +279,21 @@ footer {
     header #logo {
         font-size: 20px;
     }
+    
+    label span {
+        font-size: 20px;
+    }
+
+    input[type=number] {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    section #linksArea {
+        display: flex;
+    }
+
 }
