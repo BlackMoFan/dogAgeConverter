@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If love is transformed to something physical, it would be a dog</title>
+
+    <!-- Website icon -->
+    <link href="./assets/paw.ico" rel="icon" type="image/x-icon" />
+
+    <!-- GOOGLE FONTS FOR SPACE MONO REGULAR 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+    <!-- MATERIAL ICONS - ICON FOR PAW AND SUN AND MOON -->
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" /> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+
+    <!-- PERSONAL STYLESHEETS -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- PERSONAL SCRIPT -->
+    <script src="./js/index.js" defer></script>
+</head>
+<body>
+        <header>
+            <!-- LOGO -->
+            <div id="logo">
+                <span class="material-symbols-sharp" id="paw">pets</span>
+                <h1>Dog haven</h1>
+            </div>
+
+            <!-- theme toggle (light or dark)-->
+            <div id="theme-toggler">
+                <!-- light mode -->
+                <span class="material-icons-sharp" id="sun">
+                    light_mode
+                </span>
+                <!-- dark mode -->
+                <span class="material-icons-sharp" id="moon">
+                    dark_mode
+                </span>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h2>Convert your dog's age to human years</h2>
+                <div id="convertedAge"></div>
+                <div id="inputArea">
+                    <label>
+                        <!--<label for="amount">Enter your dog's age in years</label>-->
+                        <input type="number" id="ageOfDog" max=30 min=1 step="0.1">
+                        <span>Enter your dog's age in years</span>
+                    </label>
+                    <button type="button" id="submit-button">Click Me!</button>
+                </div>
+            </section>
+            <section>
+                <h2>How?</h2>
+                <table class="instructions-row">
+                  <tr>
+                    <td class="instructions-number">1</td>
+                    <td class="instructions-text">The first two years of a dog's life count as 10.5 dog years each.</td>
+                  </tr>
+                  <tr>
+                    <td class="instructions-number">2</td>
+                    <td class="instructions-text">Each year following equates to 4 dog years.</td>
+                  </tr>
+                </table>
+            </section>
+            <section id="relatedLinks">
+                <h2>Related links</h2>
+                <div id="linksArea">
+                    <a href="https://paws.org.ph/donate/" class="hover-underline-animation">
+                        The Philippine Animal Welfare Society (PAWS)
+                    </a>
+                    <a href="https://www.worldanimalprotection.org/our-work/protecting-animals-communities/better-lives-dogs" class="hover-underline-animation">
+                        Better Lives for Dogs 
+                    </a>
+                    <a href="https://bvspca.org/6-easy-ways-to-help-stop-animal-cruelty/" class="hover-underline-animation">
+                        6 Easy Ways to Help Stop Animal Cruelty 
+                    </a> 
+                    <a href="https://sdgs.un.org/goals" class="hover-underline-animation">
+                        The 17 Sustainable Development Goals 
+                    </a> 
+                </div>
+            </section>
+        </main>
+        <footer>
+            &copy; Copyright 2022 blackmofan
+        </footer>
+</body>
+</html>
