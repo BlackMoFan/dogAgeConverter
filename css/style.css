@@ -13,15 +13,9 @@
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
 
-    --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
     --border-radius-2: 0.8rem;
     --border-radius-3: 1.2rem;
-
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
-
-    --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
 /* Dark theme variables */
@@ -31,7 +25,6 @@
     --color-dark: #edeffd;
     --color-dark-variant: #a3bdcc;
     --color-light: rgba(0, 0, 0, 0.4);
-    --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
 html {
@@ -40,6 +33,7 @@ html {
 
 body {
     height: 100%;
+    width: 100%;
     background-color: var(--color-background);
 }
 
@@ -82,7 +76,7 @@ main {
     position: relative;
     top: 100px;
     height: 100%;
-    padding: 40px 40px;
+    width: 100%;
 }
 
 section {
@@ -256,10 +250,9 @@ section #linksArea a {
 }
 
 footer {
-    position: relative;
-    bottom: -100px;
+    position: fixed;
+    bottom: 0;
     left: 20px;
-    width: 100%;
     font-size: 9px;
     color: var(--color-dark);
 }
