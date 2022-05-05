@@ -20,10 +20,15 @@ const convertToHumanYears = () => {
         let message = "You forgot to enter the age.";
         converted.innerHTML = message;
     } else {
-        let convertedAge = convert(inputAge);
-        let message = `Your dog's human age is ${convertedAge}`;
-        converted.innerHTML = message;
-        //alert(convertedAge);
+        if (inputAge < 1) {
+            let message = "Please enter a valid number.";
+            converted.innerHTML = message;
+        } else {
+            let convertedAge = convert(inputAge);
+            let message = `Your dog's human age is ${convertedAge}`;
+            converted.innerHTML = message;
+            //alert(convertedAge);
+        }
     }
 };
 
