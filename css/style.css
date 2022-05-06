@@ -84,19 +84,33 @@ section {
     height: 100%;
     text-align: center;
     width: 80%;
-    margin: 30px auto;
+    margin: 40px auto;
 }
 
 section #convertedAge {
+    margin-top: 40px;
     height: 40px;
     font-size: 2rem;
     color: var(--color-danger);
 }
 
+section #images {
+    margin-top: 200px;
+    position: relative;
+}
+
+section #images img {
+    height: 150px;
+    position: absolute;
+    top: -170px;
+    left: 42%;
+    visibility: hidden;
+}
+
 section #inputArea {
-    max-width: 30vw;
+    max-width: 40vw;
     height: 40px;
-    margin: 200px auto;
+    margin: 70px auto 120px auto;
     padding: 0 10px;
     text-align: center;
     border-radius: var(--border-radius-2);
@@ -195,11 +209,27 @@ section #linksArea {
     margin: 20px auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
-section #linksArea a {
-    font-size: 15px;
-    padding: 20px 30px;
+section #linksArea .links {
+    margin: 10px 10px;
+    padding: 10px 10px;
+    color: var(--color-primary);
+    border: 1px var(--color-primary) solid;
+    border-radius: var(--border-radius-1);
+}
+
+section #linksArea .links:hover {
+    background-color: var(--color-info-light);
+}
+
+section #linksArea .links span {
+    font-size: 17px;
+}
+
+section #linksArea .links a {
+    font-size: 18px;
     color: var(--color-primary);
 }
 
@@ -282,11 +312,12 @@ footer a {
     }
 
     main h2 {
-        font-size: 25px;
+        font-size: 18px;
+        margin-bottom: 10px;
     }
     
     label span {
-        font-size: 8px;
+        font-size: 14px;
     }
 
     input[type=number] {
@@ -304,9 +335,10 @@ footer a {
     }
 
     button {
-        font-size: 5px;
+        font-size: 10px;
         padding: 10px 10px;
     }
+
 
     .instructions-row {
         width: 350px;
@@ -318,16 +350,34 @@ footer a {
 
     .instructions-text {
         padding: 20px 30px;
-        font-size: 10px;
+        font-size: 15px;
+    }
+
+    section #inputArea {
+        max-width: 80vw;
+    }
+
+    section #images {
+        margin-top: 250px;
+    }
+
+    section #images img {
+        left: 18%;
     }
 
     section #linksArea {
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
     }
 
-    section #linksArea a {
-        font-size: 24px;
+    section #linksArea .links {
+        margin: 10px 10px;
+        padding: 10px 10px;
     }
 
+    section #linksArea .links a {
+        font-size: 14px;
+        color: var(--color-primary);
+    }
 }

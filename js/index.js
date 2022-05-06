@@ -15,18 +15,37 @@ let button = document.querySelector("button");
 
 const convertToHumanYears = () => {
     let converted = document.getElementById("convertedAge");
+    let adultImage = document.getElementById("adultDogImage");
+    let puppyImage = document.getElementById("puppyImage");
+    let seniorImage = document.getElementById("seniorDogImage");
     let inputField = document.getElementById("ageOfDog");
     let inputAge = inputField.value;
     if (!inputAge) {
         let message = "You forgot to enter the age.";
+        adultImage.style.visibility = "hidden";
+        puppyImage.style.visibility = "hidden";
+        seniorImage.style.visibility = "hidden";
         converted.innerHTML = message;
     } else {
         if (inputAge < 1) {
             let message = "Please enter a valid number.";
+            adultImage.style.visibility = "hidden";
+            puppyImage.style.visibility = "hidden";
+            seniorImage.style.visibility = "hidden";
             converted.innerHTML = message;
         } else {
+            adultImage.style.visibility = "hidden";
+            puppyImage.style.visibility = "hidden";
+            seniorImage.style.visibility = "hidden";
             let convertedAge = convert(inputAge);
             let message = `Your dog's human age is ${convertedAge}`;
+            if (convertedAge <= 18) {
+                puppyImage.style.visibility = "visible";
+            } else if (convertedAge > 18 && convertedAge < 60) {
+                adultImage.style.visibility = "visible";
+            } else {
+                seniorImage.style.visibility = "visible";
+            }
             converted.innerHTML = message;
             //alert(convertedAge);
         }
