@@ -27,7 +27,7 @@ const convertToHumanYears = () => {
         seniorImage.style.visibility = "hidden";
         converted.innerHTML = message;
     } else {
-        if (inputAge < 1) {
+        if (inputAge < 0) {
             let message = "Please enter a valid number.";
             adultImage.style.visibility = "hidden";
             puppyImage.style.visibility = "hidden";
